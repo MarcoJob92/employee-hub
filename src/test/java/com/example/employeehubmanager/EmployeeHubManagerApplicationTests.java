@@ -17,26 +17,26 @@ import com.example.employeehubmanager.utility.XlsxReader;
 @SpringBootTest
 class EmployeeHubManagerApplicationTests {
 
-	@Autowired
-	private XlsxReader reader;
+   @Autowired
+   private XlsxReader reader;
 	
-	@Autowired
-    private EmployeeAddressService employeeAddressService;
+   @Autowired
+   private EmployeeAddressService employeeAddressService;
 	
-	@Autowired
-    private EmployeeService employeeService;
+   @Autowired
+   private EmployeeService employeeService;
 	
-	@Test
-	void testImportFromXlsx() {
-		reader.readDataFromXlsx();
-		
-		List<Employee> employees = (List<Employee>) employeeService.findAll();
-		assertEquals(50, employees.size());
-		
-		List<EmployeeAddress> hiramAddresses =
-				(List<EmployeeAddress>) employeeAddressService.findAllByEmployeeCode("170-91-8199");
-		assertEquals(2, hiramAddresses.size());
-		assertEquals("Hiram", hiramAddresses.get(0).getEmployee().getFirstName());
-	}
+   @Test
+   void testImportFromXlsx() {
+	reader.readDataFromXlsx();
+
+	List<Employee> employees = (List<Employee>) employeeService.findAll();
+	assertEquals(50, employees.size());
+
+	List<EmployeeAddress> hiramAddresses =
+			(List<EmployeeAddress>) employeeAddressService.findAllByEmployeeCode("170-91-8199");
+	assertEquals(2, hiramAddresses.size());
+	assertEquals("Hiram", hiramAddresses.get(0).getEmployee().getFirstName());
+   }
 
 }
