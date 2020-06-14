@@ -2,7 +2,7 @@
 A Java application that imports data from an Xlsx File, creates Tables and Relationships and shows data on JSP pages
 
 # Technologies
-This application was created thanks to several Frameworks:
+This application was created thanks to several Frameworks and Technologies:
   - **Hibernate**:  
   Hibernate is an ORM Framework.  
   It allows to map the Database Tables to the Java Classes.  
