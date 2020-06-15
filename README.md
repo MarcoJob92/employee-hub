@@ -24,12 +24,18 @@ This application was created thanks to several Frameworks and Technologies:
 To get this Application running locally:
 
   - Clone/Download the Java project
-  - Either use your IDE (e.g. Eclipse) to:
+  - Use your IDE (e.g. Eclipse) to:
+    - Import the project as a Maven project
     - Run the project as Maven install 
-    - Run the EmployeeHubManagerApplication.java as Java Application
-  - or:
+    - Run the EmployeeHubManagerApplication.java as a Java Application
+  - or run the following commands from terminal on the root directory:
     ```
     mvn install
     java -jar target/employee-hub-manager-0.0.1-SNAPSHOT.jar
     ```
-  - Also have MySQL running locally and create a Database called 'EmployeeHubDB'
+  - Also have MySQL running locally and create a Database called 'EmployeeHubDB':
+    ```
+    mysql> CREATE DATABASE `EmployeeHubDB`;
+    ```
+  
+The application will run on http://localhost:8080.
